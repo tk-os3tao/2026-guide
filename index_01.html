@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fontsの読み込みコードを追加 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&display=swap" rel="stylesheet" />
+
+    <title>切り絵シェードランプ</title>
+    <link rel="stylesheet" href="style_01.css" />
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="header-inner">
+        <!-- メニュー開閉ボタン -->
+        <button class="hamburger-btn" id="js-hamburger" aria-label="メニューを開く">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- 開くメニュー本体 -->
+        <nav class="nav-menu" id="js-nav">
+          <ul>
+            <li><a href="index_00.html">TOP</a></li>
+            <li><a href="index_01.html">切り絵</a></li>
+            <li><a href="index_02.html">粘土</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- 1. ヒーローギャラリーエリア -->
+      <section class="hero-section">
+        <div class="hero-inner">
+          <!-- 装飾アイコン -->
+          <span class="deco-icon star-1">★</span>
+          <span class="deco-icon flower-1">🌸</span>
+          <span class="deco-icon star-2">★</span>
+          <span class="deco-icon flower-2">🌸</span>
+
+          <!-- メイン作品画像 -->
+          <div class="flex-container">
+            <img class="sketch-img" src="png/IMG_2670.jpg" alt="スケッチ・下絵" />
+            <img class="lantern-img" src="png/切り絵.PNG" alt="完成作品" />
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- 2. 吹き出し & Clickボタンエリア -->
+      <section class="thought-section">
+        <!-- 切り替え対象の吹き出しエリア -->
+        <div class="thought-bubble-container" id="js-thought-container">
+          <!-- 最初に見えている吹き出し (表) -->
+          <div class="thought-bubble front">
+            <p>
+              切り絵って
+              <br />
+              なんか複雑そう...
+            </p>
+          </div>
+
+          <!-- Click後に表示される吹き出し (裏) -->
+          <div class="thought-bubble back">テーマと幾何学でそれっぽく！！</div>
+        </div>
+
+        <!-- Clickボタン -->
+        <div class="click-btn-wrapper">
+          <span class="sparkle-icon">✨</span>
+          <button type="button" class="click-btn" id="js-click-btn">Click</button>
+        </div>
+      </section>
+
+      <!-- 3. おおまかな流れエリア -->
+      <section class="flow-section">
+        <div class="section-title-badge">おおまかな流れ</div>
+
+        <!-- スライダー全体エリア -->
+        <div class="flow-slider-wrapper">
+          <!-- 見える表示領域 -->
+          <div class="flow-slider-container">
+            <!-- 横に並ぶカードの列 -->
+            <div class="flow-cards-track" id="js-flow-track">
+              <!-- カード 1 -->
+              <div class="flow-card">
+                <div class="card-num">1</div>
+                <div class="card-img">
+                  <img src="png/無題677_20260701211704.PNG" alt="ステップ1" />
+                </div>
+                <p class="card-text">
+                  <strong>1. テーマを決める</strong>
+                  <br />
+                  <small>（今回作るのは切り絵シェードランプ）</small>
+                </p>
+              </div>
+
+              <!-- カード 2 -->
+              <div class="flow-card">
+                <div class="card-num">2</div>
+                <div class="card-img">
+                  <img src="png/IMG_2671.jpg" alt="ステップ2" />
+                </div>
+                <p class="card-text">
+                  <strong>2. テーマに合わせて</strong>
+                  <br />
+                  ポイントの絵を1面に2つほど載せる
+                </p>
+              </div>
+
+              <!-- カード 3 -->
+              <div class="flow-card">
+                <div class="card-num">3</div>
+                <div class="card-img">
+                  <img src="png/切り絵.PNG" alt="ステップ3" />
+                </div>
+                <p class="card-text">
+                  <strong>3. 枠線にそって切る</strong>
+                  <br />
+                  丁寧に切り抜いていく
+                </p>
+              </div>
+
+              <!-- カード 4-->
+              <div class="flow-card">
+                <div class="card-num">4</div>
+                <div class="card-img">
+                  <img src="png/hikari.PNG" alt="ステップ4" />
+                </div>
+                <p class="card-text">
+                  <strong>4.完成！</strong>
+                  <br />
+                  （中にライトを入れたらより綺麗に！）
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右矢印ボタン -->
+          <button class="flow-arrow-btn" id="js-next-btn" aria-label="次のカードへ">▶</button>
+        </div>
+        <!-- /.flow-slider-wrapper ここでしっかり閉じるのがポイント！ -->
+
+        <!-- コツ ボックス -->
+        <div class="tips-box">
+          <div class="tips-badge">コツ</div>
+
+          <!-- 見える枠エリア -->
+          <div class="tips-slider-container">
+            <!-- テキストのトラック -->
+            <div class="tips-track" id="js-tips-track">
+              <!-- コツ 1 -->
+              <div class="tips-item">
+                テーマはなんでもOK！
+                <br />
+                あえて面からはみ出してみることも大切
+              </div>
+
+              <!-- コツ 2 -->
+              <div class="tips-item">
+                カッターは透明な部分を 切らないように滑る感じに！
+
+                <br />
+                フィルムは隅まできっちり貼る
+              </div>
+            </div>
+          </div>
+
+          <!-- 矢印ボタン -->
+          <button class="tips-arrow-btn" id="js-tips-next-btn" aria-label="次のコツへ">▶</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- TOPに戻るボタン -->
+    <a href="#" class="back-to-top" aria-label="TOPに戻る">
+      <span>↑</span>
+      <small>TOPに戻る</small>
+    </a>
+
+    <!-- すべての動作用 JavaScript（これひとつにまとめました！） -->
+    <script>
+      // 1. ハンバーガーメニュー
+      const btn = document.getElementById("js-hamburger");
+      const nav = document.getElementById("js-nav");
+      if (btn && nav) {
+        btn.addEventListener("click", () => {
+          btn.classList.toggle("is-active");
+          nav.classList.toggle("is-active");
+        });
+        const navLinks = nav.querySelectorAll("a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            btn.classList.remove("is-active");
+            nav.classList.remove("is-active");
+          });
+        });
+      }
+
+      // 2. 吹き出しClick切替
+      const clickBtn = document.getElementById("js-click-btn");
+      const thoughtContainer = document.getElementById("js-thought-container");
+      if (clickBtn && thoughtContainer) {
+        clickBtn.addEventListener("click", () => {
+          thoughtContainer.classList.toggle("is-flipped");
+        });
+      }
+
+      // 3. おおまかな流れスライダー
+      const track = document.getElementById("js-flow-track");
+      const nextBtn = document.getElementById("js-next-btn");
+      const cards = document.querySelectorAll(".flow-card");
+      let currentIndex = 0;
+
+      if (track && nextBtn && cards.length > 0) {
+        nextBtn.addEventListener("click", () => {
+          const cardWidth = cards[0].offsetWidth + 15;
+          if (currentIndex < cards.length - 2) {
+            currentIndex++;
+          } else {
+            currentIndex = 0;
+          }
+          track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        });
+      }
+
+      // 4. 「コツ」スライダー
+      const tipsTrack = document.getElementById("js-tips-track");
+      const tipsNextBtn = document.getElementById("js-tips-next-btn");
+      const tipsItems = document.querySelectorAll(".tips-item");
+      let currentTipsIndex = 0;
+
+      if (tipsTrack && tipsNextBtn && tipsItems.length > 0) {
+        tipsNextBtn.addEventListener("click", () => {
+          if (currentTipsIndex < tipsItems.length - 1) {
+            currentTipsIndex++;
+          } else {
+            currentTipsIndex = 0;
+          }
+          tipsTrack.style.transform = `translateX(-${currentTipsIndex * 100}%)`;
+        });
+      }
+    </script>
+  </body>
+</html>
