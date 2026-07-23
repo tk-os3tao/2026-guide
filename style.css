@@ -43,7 +43,9 @@ body {
   flex-direction: column;
   gap: 5px;
   padding: 8px;
-  z-index: 110;
+  z-index: 120;
+   right:16px
+      top:12px
   position: relative;
 }
 
