@@ -44,8 +44,8 @@ body {
   gap: 5px;
   padding: 8px;
   z-index: 120;
-   right:16px;
-      top:12px;
+  right:16px;
+  top:12px;
   position: fixed;
 }
 
