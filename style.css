@@ -43,10 +43,10 @@ body {
   flex-direction: column;
   gap: 5px;
   padding: 8px;
-  z-index: 120;
-  right:16px;
-  top:12px;
+  z-index: 120; /* メニューより手前に表示 */
   position: fixed;
+   top:12px;
+   right:16px;
 }
 
 .hamburger-btn span {
